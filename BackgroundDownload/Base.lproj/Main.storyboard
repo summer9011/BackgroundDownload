@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zmd-c2-LdZ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Delicious Dishes-->
+        <scene sceneID="7n5-Qo-kSt">
+            <objects>
+                <tableViewController id="S1Z-Nj-J1x" customClass="TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="MF9-Yf-Zf1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="7lT-7V-yvG">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7lT-7V-yvG" id="1aJ-BX-ll7">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="S1Z-Nj-J1x" id="lPI-KL-LEf"/>
+                            <outlet property="delegate" destination="S1Z-Nj-J1x" id="JQx-uP-FyA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Delicious Dishes" id="3ci-cJ-MSW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r4M-FO-yrW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264" y="298"/>
+        </scene>
+        <!--Download Controller-->
+        <scene sceneID="7lM-hG-J9c">
+            <objects>
+                <viewController id="zmd-c2-LdZ" customClass="DownloadController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XRp-6m-iuX"/>
+                        <viewControllerLayoutGuide type="bottom" id="aJ0-eZ-Vtp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LOB-M4-3jY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IhL-Jq-UPi">
+                                <rect key="frame" x="76" y="80" width="418" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="n3X-Bu-DTx"/>
+                                </constraints>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下载1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRo-zQ-9ov">
+                                <rect key="frame" x="16" y="70" width="44" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="BCB-QR-oAF"/>
+                                    <constraint firstAttribute="height" constant="21" id="MYl-cB-BXl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alx-tI-fmj">
+                                <rect key="frame" x="504" y="70" width="80" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="4Ro-GM-KIk"/>
+                                    <constraint firstAttribute="height" constant="21" id="M6a-om-3wg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ja-uV-te1">
+                                <rect key="frame" x="266" y="183" width="69" height="30"/>
+                                <state key="normal" title="开始下载1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startDownload1:" destination="zmd-c2-LdZ" eventType="touchUpInside" id="2Ws-k1-I2f"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJP-cB-pcz">
+                                <rect key="frame" x="200" y="112" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="JlE-FW-rNs"/>
+                                    <constraint firstAttribute="width" constant="200" id="vcb-5t-Exc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DyB-Wr-DX8">
+                                <rect key="frame" x="36" y="313" width="528" height="267"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j74-tN-jVu">
+                                <rect key="frame" x="266" y="263" width="69" height="30"/>
+                                <state key="normal" title="暂停下载1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopDownload1:" destination="zmd-c2-LdZ" eventType="touchUpInside" id="vnB-iW-kiq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="DyB-Wr-DX8" secondAttribute="centerX" id="2M0-zy-FNM"/>
+                            <constraint firstAttribute="centerX" secondItem="j74-tN-jVu" secondAttribute="centerX" id="3gw-H8-80p"/>
+                            <constraint firstAttribute="centerX" secondItem="LJP-cB-pcz" secondAttribute="centerX" id="7pR-c0-frF"/>
+                            <constraint firstItem="IhL-Jq-UPi" firstAttribute="leading" secondItem="LOB-M4-3jY" secondAttribute="leadingMargin" constant="60" id="8Ji-K9-v1R"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DyB-Wr-DX8" secondAttribute="trailing" constant="20" id="8SN-OU-RHy"/>
+                            <constraint firstItem="LJP-cB-pcz" firstAttribute="top" secondItem="IhL-Jq-UPi" secondAttribute="bottom" constant="30" id="BLN-Nm-KYb"/>
+                            <constraint firstItem="alx-tI-fmj" firstAttribute="trailing" secondItem="LOB-M4-3jY" secondAttribute="trailingMargin" id="DjW-HE-34M"/>
+                            <constraint firstItem="j74-tN-jVu" firstAttribute="top" secondItem="7ja-uV-te1" secondAttribute="bottom" constant="50" id="Fhh-wR-fqi"/>
+                            <constraint firstItem="aRo-zQ-9ov" firstAttribute="top" secondItem="XRp-6m-iuX" secondAttribute="bottom" constant="50" id="Iuz-7p-15t"/>
+                            <constraint firstItem="aJ0-eZ-Vtp" firstAttribute="top" secondItem="DyB-Wr-DX8" secondAttribute="bottom" constant="20" id="K0A-N6-JnI"/>
+                            <constraint firstAttribute="centerX" secondItem="7ja-uV-te1" secondAttribute="centerX" id="OQA-p0-MU6"/>
+                            <constraint firstItem="7ja-uV-te1" firstAttribute="top" secondItem="LJP-cB-pcz" secondAttribute="bottom" constant="50" id="Q2J-51-Nz2"/>
+                            <constraint firstItem="aRo-zQ-9ov" firstAttribute="centerY" secondItem="alx-tI-fmj" secondAttribute="centerY" id="TSt-xc-ZXn"/>
+                            <constraint firstItem="DyB-Wr-DX8" firstAttribute="top" secondItem="j74-tN-jVu" secondAttribute="bottom" constant="20" id="TvQ-1s-3zk"/>
+                            <constraint firstItem="aRo-zQ-9ov" firstAttribute="centerY" secondItem="IhL-Jq-UPi" secondAttribute="centerY" id="gT4-Mr-aOt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IhL-Jq-UPi" secondAttribute="trailing" constant="90" id="oIC-nZ-u3r"/>
+                            <constraint firstItem="aRo-zQ-9ov" firstAttribute="leading" secondItem="LOB-M4-3jY" secondAttribute="leadingMargin" id="rHy-S6-HCA"/>
+                            <constraint firstItem="DyB-Wr-DX8" firstAttribute="leading" secondItem="LOB-M4-3jY" secondAttribute="leadingMargin" constant="20" id="ttS-hV-o6E"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="degree1" destination="alx-tI-fmj" id="nSN-CN-W43"/>
+                        <outlet property="download1" destination="7ja-uV-te1" id="KbE-iw-lkc"/>
+                        <outlet property="downloadDir" destination="DyB-Wr-DX8" id="b1M-PO-tk0"/>
+                        <outlet property="progress1" destination="IhL-Jq-UPi" id="fda-82-Qke"/>
+                        <outlet property="taskFromLabel" destination="LJP-cB-pcz" id="hWJ-T9-Tu8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aOy-wm-47K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-556" y="1076"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Dc9-fy-ux3">
+            <objects>
+                <navigationController id="C44-QN-MEt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tj9-X4-RlF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="S1Z-Nj-J1x" kind="relationship" relationship="rootViewController" id="35O-bw-Aed"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8GK-k0-rKV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-556" y="298"/>
+        </scene>
+    </scenes>
+</document>
